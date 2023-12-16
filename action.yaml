@@ -1,0 +1,15 @@
+name: 'PHP Syntax Checker (Lint)'
+description: 'php syntax control (php -l)'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+inputs:
+  scan_paths:
+    description: 'directory to validate php syntax errors'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.scan_paths }}
