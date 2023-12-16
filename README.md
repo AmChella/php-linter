@@ -7,7 +7,9 @@ scan_paths
 The directory to control takes "." by Default.
 
 Example usage
+```
 - name: PHP Syntax Checker (Lint)
   uses: AmChella/php-linter@7.4
   with:
     scan_paths: '.' or 'dir,dir2'
+```
